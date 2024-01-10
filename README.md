@@ -1,6 +1,6 @@
 # Migrate old paradox tables to Sqlite
 
-Last night's new project was the rewriting of an ancient Delphi program with a paradoxical database.
+Last night's new project was the rewriting of an ancient Delphi program with a paradox database. 
 As usual, I looked for solutions online, but since I couldn't find a simple and working free solution, I wrote one instead.
 
 The solution is a quite simple Python code (not as clean as should ;)
