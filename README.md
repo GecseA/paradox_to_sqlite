@@ -14,4 +14,7 @@ required dependencies: ( pip intall <lib> )
 python gv_converter.py -c cp852 -i "F:\many\many\folder\db\MYPARADOX1.DB" "F:\many\many\folder\db\MYPARADOX2.DB"  -o "F:\where\I\want\my\migrated_sqlite.db"
 ```
 
+Feel free to write me on errors and request (if U cleanup the code just create a pull request :)
+
+More articles, code examples:
 https://gecsevar.hu
