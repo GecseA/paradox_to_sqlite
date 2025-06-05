@@ -7,6 +7,7 @@ import sys, getopt
 import argparse
 
 from parser_sql import convert_db
+import os
 
 def create_connection(db_file):
     conn = None
@@ -23,6 +24,7 @@ def main(argv):
     argParser.add_argument("-c", "--codec", help="Source Paradox table CODE PAGE")
     argParser.add_argument("-i", "--in-files", nargs='+', help="Source Paradox table files")
     argParser.add_argument("-o", "--out-file", help="Destination Sqlite DB file")
+    argParser.add_argument("-p", "--path", help="Path to source Paradox table files (Optional)", default="")
 
     args = argParser.parse_args()
 
@@ -33,6 +35,8 @@ def main(argv):
     conn = create_connection(args.out_file)
 
     for file_db in args.in_files:
+        if args.path:
+            file_db = os.path.join(args.path, file_db)
         convert_db(conn, file_db, args.codec)
     
     conn.commit()
